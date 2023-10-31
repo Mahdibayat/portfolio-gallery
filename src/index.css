@@ -1,0 +1,14 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: 'Slabo 27px', serif;
+}
+
+a {
+  text-decoration: none;
+  color: gray
+}
