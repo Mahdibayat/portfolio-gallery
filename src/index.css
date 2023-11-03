@@ -8,7 +8,34 @@ body {
   font-family: 'Slabo 27px', serif;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 a {
   text-decoration: none;
   color: gray
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #b8b8b8;
+  border-radius: 10px;
+}
+
+.font-pacifico {
+  font-family: 'Pacifico', cursive;
+  font-family: 'Slabo 27px', serif;
+  /* fontFamily:'Pacifico',  */
 }

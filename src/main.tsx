@@ -5,6 +5,7 @@ import './index.css'
 import {
   BrowserRouter,
   createBrowserRouter,
+  Navigate,
   Route,
   RouterProvider,
   Routes,
@@ -14,6 +15,11 @@ import { ThemeProvider } from '@emotion/react';
 import { createTheme } from '@mui/material';
 import PageOne from './pages/pageOne.tsx';
 import SiteLayout from './components/siteLayout.tsx';
+import Paintings from './pages/app/paintings.tsx';
+import Poems from './pages/app/poems.tsx';
+import CVPage from './pages/app/cv.tsx';
+import Designs from './pages/app/designs.tsx';
+import Contact from './pages/app/contact.tsx';
 
 const theme = createTheme({
   breakpoints: {
@@ -56,7 +62,13 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 
           <Route path='/app' element={<SiteLayout />}>
             <Route index element={<PageOne />} />
+            <Route path='/app/paintings' element={<Paintings />} />
+            <Route path='/app/poems' element={<Poems />} />
+            <Route path='/app/CV' element={<CVPage />} />
+            <Route path='/app/designs' element={<Designs />} />
+            <Route path='/app/contact' element={<Contact />} />
           </Route>
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
