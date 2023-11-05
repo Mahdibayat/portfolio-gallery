@@ -9,7 +9,7 @@ import DownloadIcon from '@mui/icons-material/Download';
 export default function CVPage() {
   const isMobile = useMediaQuery((t:any) => t.breakpoints.down('md'));
   return (
-    <Stack gap={5} sx={{mt:5}}>
+    <Stack gap={3} sx={{mt:5}}>
 
       <Grid 
         container 
@@ -18,7 +18,9 @@ export default function CVPage() {
         sx={{
           borderRadius: 3,
           p:2,
-          px: isMobile ? 1 : 4
+          px: isMobile ? 1 : 4,
+          maxWidth: '1000px',
+          margin: 'auto'
         }}
       >
         <Grid item xs={12} md={6} order={{xs:2, md:1}}>
@@ -75,7 +77,7 @@ export default function CVPage() {
           p:2,
           px: isMobile ? 1 : 4,
           my: 2,
-          mb: 6
+          mb: 6,
         }}
       >
         <Typography component={'h3'} variant='h4'>EDUCATION</Typography>

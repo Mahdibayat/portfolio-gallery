@@ -2,6 +2,7 @@ import Masonry from "@mui/lab/Masonry";
 import { Box, Paper, Typography } from "@mui/material";
 
 import MasonItem from "../components/masonItem";
+import { pagesSignal } from "../state/pageSignal";
 
 export default function PageOne() {
   return (
@@ -15,9 +16,6 @@ export default function PageOne() {
       <Masonry
         columns={{xs:1, sm:2, md:3}}
         spacing={3}
-        sx={{
-          
-        }}
       >
         <MasonItem
           imgUrl="/images/8.png"
@@ -25,6 +23,7 @@ export default function PageOne() {
           title="Paintings"
           titleSide="bottom"
           link={'/app/paintings'}
+          onClick={() => pagesSignal.value = "paintings" }
         />
         
         <MasonItem
@@ -33,6 +32,7 @@ export default function PageOne() {
           title="Poems"
           titleSide="top"
           link={'/app/poems'}
+          onClick={() => pagesSignal.value = "poems" }
         />
         
         <MasonItem
@@ -41,6 +41,7 @@ export default function PageOne() {
           title="CV"
           titleSide="top"
           link={'/app/CV'}
+          onClick={() => pagesSignal.value = "CV" }
         />
 
         <MasonItem
@@ -49,6 +50,7 @@ export default function PageOne() {
           title="Designs"
           titleSide="top"
           link={'/app/designs'}
+          onClick={() => pagesSignal.value = "designs" }
         />
         
         <MasonItem
@@ -57,6 +59,7 @@ export default function PageOne() {
           title="Contact"
           titleSide="bottom"
           link={'/app/contact'}
+          onClick={() => pagesSignal.value = "contact" }
         />
 
       </Masonry>

@@ -2,18 +2,17 @@ import { Box, Typography } from '@mui/material'
 
 import { Link } from 'react-router-dom'
 
-interface MasonItemType {
+interface GalleryMasonItemType {
   imgUrl: string
   title: string
   titleSide: 'top' | 'bottom'
   aspectRatio: string
   link: string
-  onClick: () => void
 }
 
-export default function MasonItem({imgUrl, title, titleSide, aspectRatio, link, onClick}: MasonItemType) {
+export default function GalleryMasonItem({imgUrl, title, titleSide, aspectRatio, link,}: GalleryMasonItemType) {
   return (
-    <Link to={link} onClick={onClick}>
+    <Link to={link}>
       <Box
         sx={{
           position: 'relative',
@@ -53,10 +52,11 @@ export default function MasonItem({imgUrl, title, titleSide, aspectRatio, link, 
             borderRadius: 2,
             px:1,
             textShadow: '0 0 5px #f00',
-            fontFamily:'Pacifico'
+            fontFamily:'Pacifico',
+            whiteSpace: 'nowrap'
           }}
           component={'h3'}
-          variant="h4"
+          variant="h6"
         >{title}</Typography>
       </Box>
     </Link>

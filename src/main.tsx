@@ -1,5 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import 'swiper/css';
+// import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import "yet-another-react-lightbox/styles.css";
+import "yet-another-react-lightbox/plugins/thumbnails.css";
 import './index.css'
 
 import {
@@ -20,6 +26,11 @@ import Poems from './pages/app/poems.tsx';
 import CVPage from './pages/app/cv.tsx';
 import Designs from './pages/app/designs.tsx';
 import Contact from './pages/app/contact.tsx';
+import ScatteredPaints from './pages/app/paintings/scattered.tsx';
+import AllAroundMe from './pages/app/paintings/allAroundMe.tsx';
+import AnAfternoonInHiroshima from './pages/app/paintings/anAfternoonInHiroshima.tsx';
+import AestheticsOfSuffering from './pages/app/paintings/aestheticsOfSuffering.tsx';
+import ThatDay from './pages/app/paintings/thatDay.tsx';
 
 const theme = createTheme({
   breakpoints: {
@@ -62,7 +73,14 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 
           <Route path='/app' element={<SiteLayout />}>
             <Route index element={<PageOne />} />
-            <Route path='/app/paintings' element={<Paintings />} />
+            <Route path='/app/paintings'>
+              <Route index element={<Paintings />} />
+              <Route path='/app/paintings/scattered' element={<ScatteredPaints />} />
+              <Route path='/app/paintings/all-around-me' element={<AllAroundMe />} />
+              <Route path='/app/paintings/an-afternoon-in-hiroshima' element={<AnAfternoonInHiroshima />} />
+              <Route path='/app/paintings/aesthetics-of-suffering' element={<AestheticsOfSuffering />} />
+              <Route path='/app/paintings/that-day' element={<ThatDay />} />
+            </Route>
             <Route path='/app/poems' element={<Poems />} />
             <Route path='/app/CV' element={<CVPage />} />
             <Route path='/app/designs' element={<Designs />} />
