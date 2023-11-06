@@ -13,6 +13,10 @@ export default function PageOne() {
         m:'30px auto 20px'
       }}
     >
+      <Typography className="font-pacifico"
+        component={'h1'} 
+        sx={{textAlign:'center', fontFamily: "Pacifico", fontSize: '2rem', color:'secondary.dark', pb:3}}
+      >in this website you will see</Typography>
       <Masonry
         columns={{xs:1, sm:2, md:3}}
         spacing={3}
@@ -44,14 +48,14 @@ export default function PageOne() {
           onClick={() => pagesSignal.value = "CV" }
         />
 
-        <MasonItem
+        {/* <MasonItem
           imgUrl="/images/10.jpg"
           aspectRatio='0.73 / 1'
           title="Designs"
           titleSide="top"
           link={'/app/designs'}
           onClick={() => pagesSignal.value = "designs" }
-        />
+        /> */}
         
         <MasonItem
           imgUrl="/images/12.jpg"

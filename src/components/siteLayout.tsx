@@ -54,7 +54,6 @@ export default function SiteLayout() {
               <Tabs onChange={handleChangeRoute} value={pagesSignal.value}>
                 <Tab value='paintings' label="Paintings" />
                 <Tab value='poems' label="Poems" />
-                <Tab value='designs' label="Designs" />
                 <Tab value='CV' label="CV" />
                 <Tab value='contact' label="Contact" />
               </Tabs>
@@ -124,7 +123,6 @@ export default function SiteLayout() {
         >
           <Tab value='paintings' label="Paintings" />
           <Tab value='poems' label="Poems" />
-          <Tab value='designs' label="Designs" />
           <Tab value='CV' label="CV" />
           <Tab value='contact' label="Contact" />
         </Tabs>
