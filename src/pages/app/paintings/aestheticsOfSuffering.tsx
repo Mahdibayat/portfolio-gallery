@@ -27,7 +27,7 @@ export default function AestheticsOfSuffering() {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          height: {xs:'300px', md:'500px'},
+          height: {xs:'340px', md:'500px'},
           width: 1,
           maxWidth: '500px',
           "> img": {
@@ -40,7 +40,7 @@ export default function AestheticsOfSuffering() {
         }}
       >
         <Stack alignItems={'center'}>
-          <Typography  component={'h1'} variant={'h2'} sx={{mb: 2, mt:1}}>All Around Me</Typography>
+          <Typography  component={'h1'} variant={'h2'} sx={{mb: 2, mt:1, fontSize:{xs:'1.4rem', md:'3rem'}}}>All Around Me</Typography>
         </Stack>
 
         
@@ -59,6 +59,7 @@ export default function AestheticsOfSuffering() {
           pagination={true}
           modules={[EffectCoverflow, Pagination]}
           onClick={() => setOpen(true)}
+          loop={true}
         >
           <SwiperSlide>
             <img src="/images/30.jpg" alt=''  />

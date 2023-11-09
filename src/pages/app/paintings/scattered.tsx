@@ -1,12 +1,11 @@
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 
-import { Box, Stack, Typography, useMediaQuery, } from '@mui/material';
+import { Box, Stack, Typography } from '@mui/material';
 
 export default function ScatteredPaints() {
-  const isMobile = useMediaQuery((t : any) => t.breakpoints.down('md'))
 
   return (
     <Box sx={{
@@ -23,17 +22,17 @@ export default function ScatteredPaints() {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        height: {xs:'300', md:'600px'},
+        height: {xs:'300px', md:'600px'},
         "> img": {
           display: 'block',
           width:1,
           height: 1,
-          objectFit: 'cover',
+          objectFit: 'contain',
         }
       }
     }}>
       <Stack alignItems={'center'}>
-        <Typography  component={'h1'} variant={'h2'} sx={{mb: 2, mt:1}}>Scattered</Typography>
+        <Typography  component={'h1'} variant={'h2'} sx={{mb: 2, mt:1, fontSize:{xs:'1.4rem', md:'3rem'}}}>Scattered</Typography>
       </Stack>
       <Swiper
         slidesPerView={'auto'}
@@ -47,6 +46,7 @@ export default function ScatteredPaints() {
           disableOnInteraction: false,
         }}
         navigation={true}
+        loop={true}
       >
         <SwiperSlide style={{width:'100%' ,maxWidth: '500px'}}>
           <img src="/images/15.png" alt='' />

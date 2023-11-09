@@ -38,7 +38,7 @@ export default function StartPage() {
           </Fade>
 
           <Zoom in={mounted} timeout={5000}>
-          <Link to={'/one'}>
+          <Link to={'/app'}>
             <Button
               variant="outlined"
               sx={{minWidth: '300px', mt:1}}

@@ -1,10 +1,8 @@
-import { Box, Grid, Paper, Stack, Typography, useMediaQuery } from '@mui/material'
-import React from 'react'
-import { Link } from 'react-router-dom'
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 import CallIcon from '@mui/icons-material/Call';
-import Person2Icon from '@mui/icons-material/Person2';
 import DownloadIcon from '@mui/icons-material/Download';
+import { Box, Grid, Paper, Stack, Typography, useMediaQuery } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 export default function CVPage() {
   const isMobile = useMediaQuery((t:any) => t.breakpoints.down('md'));
@@ -29,21 +27,21 @@ export default function CVPage() {
               <Link to={'mailto:samaneh.sarchami777@gmail.com'}>
                 <Stack direction={'row'} gap={1}>
                   <AlternateEmailIcon />
-                  <Typography>samaneh.sarchami777@gmail.com</Typography>
+                  <Typography sx={{textDecoration:'underline', color:'primary.main', overflow:'clip'}}>samaneh.sarchami777@gmail.com</Typography>
                 </Stack>
               </Link>
 
               <Link to={'tel:+989373725256'}>
                 <Stack direction={'row'} gap={1}>
                   <CallIcon />
-                  <Typography>+98 937 372 5256</Typography>
+                  <Typography sx={{textDecoration:'underline', color:'primary.main'}}>+98 937 372 5256</Typography>
                 </Stack>
               </Link>
 
               <a download={true} href={"/cv-Sarchami.pdf"} >
                 <Stack direction={'row'} gap={1}>
                   <DownloadIcon />
-                  <Typography>DownLoad CV</Typography>
+                  <Typography sx={{textDecoration:'underline', color:'primary.main'}}>DownLoad CV</Typography>
                 </Stack>
               </a>
             </Stack>

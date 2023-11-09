@@ -13,10 +13,10 @@ export default function ARoomForOnesWon() {
     <>
       <Box sx={{
         px:{xs:1, sm:2, md: 10},
-        mt:{xs:1, sm:2, md: 4},
+        mt:{xs:6, sm:10, md: 3},
         ".swiper": {
           width: 1,
-          height: 1,
+          height: {xs:"300px", md:'500px'},
         },
         ".swiper-slide": {
           textAlign: 'center',
@@ -25,12 +25,11 @@ export default function ARoomForOnesWon() {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          height: {xs:'300px', md:'500px'},
-          maxWidth: '500px',
-          "> img": {
+          height: 1,
+          ">img" : {
             display: 'block',
-            width:1,
-            height: 1,
+            width: '100%',
+            height: '100%',
             objectFit: 'cover',
           }
           }
@@ -48,6 +47,7 @@ export default function ARoomForOnesWon() {
           pagination={{
             clickable: true,
           }}
+          rewind={true}
           modules={[Autoplay, Pagination, Navigation]}
           autoplay={{
             delay: 6500,
@@ -56,31 +56,31 @@ export default function ARoomForOnesWon() {
           navigation={true}
           onClick={() => setOpen(true)}
         >
-          <SwiperSlide >
-            <img src="/images/38.jpeg" alt='' style={{}}  />
+          <SwiperSlide style={{width: '100%', maxWidth:'240px'}} >
+            <img src="/images/38.jpeg" alt=''  />
           </SwiperSlide>
 
-          <SwiperSlide>
+          <SwiperSlide style={{width:'100%', maxWidth: '700px'}}>
             <img src="/images/39.jpeg" alt=''  />
           </SwiperSlide>
 
-          <SwiperSlide>
+          <SwiperSlide style={{width:'100%', maxWidth: '900px'}}>
             <img src="/images/40.jpeg" alt=''  />
           </SwiperSlide>
 
-          <SwiperSlide>
+          <SwiperSlide style={{width:'100%', maxWidth: '750px'}}>
             <img src="/images/41.jpeg" alt=''  />
           </SwiperSlide>
 
-          <SwiperSlide>
+          <SwiperSlide  style={{width:'100%', maxWidth: '460px'}}>
             <img src="/images/42.jpeg" alt=''  />
           </SwiperSlide>
 
-          <SwiperSlide>
+          <SwiperSlide  style={{width:'100%', maxWidth: '380px'}}>
             <img src="/images/44.jpeg" alt=''  />
           </SwiperSlide>
 
-          <SwiperSlide>
+          <SwiperSlide  style={{width:'100%', maxWidth: '680px'}}>
             <img src="/images/45.jpeg" alt=''  />
           </SwiperSlide>
           

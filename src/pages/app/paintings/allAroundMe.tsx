@@ -41,7 +41,7 @@ export default function AllAroundMe() {
         }}
       >
         <Stack alignItems={'center'}>
-          <Typography  component={'h1'} variant={'h2'} sx={{mb: 2, mt:1}}>All Around Me</Typography>
+          <Typography  component={'h1'} variant={'h2'} sx={{mb: 2, mt:1, fontSize:{xs:'1.4rem', md:'3rem'}  }}>All Around Me</Typography>
         </Stack>
 
         
@@ -61,6 +61,7 @@ export default function AllAroundMe() {
           pagination={true}
           modules={[EffectCoverflow, Pagination]}
           onClick={() => setOpen(true)}
+          loop={true}
         >
           <SwiperSlide>
             <img src="/images/16.jpg" alt=''  />

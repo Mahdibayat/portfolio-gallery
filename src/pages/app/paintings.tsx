@@ -1,8 +1,10 @@
 import { Masonry } from "@mui/lab";
-import { Box, Stack } from "@mui/material";
+import { Box, useTheme } from "@mui/material";
 import GalleryMasonItem from "../../components/galleryMasonItem";
 
 export default function Paintings() {
+  const t = useTheme()
+
   return (
     <Box
       sx={{
@@ -15,6 +17,11 @@ export default function Paintings() {
       <Masonry 
         spacing={4}
         columns={{xs:1,sm:2,md:3, lg:4}}
+        sx={{
+          [t.breakpoints.down('md')]: {
+            m: '0'
+          }
+        }}
       >
           <GalleryMasonItem
             imgUrl="/images/7.jpg"

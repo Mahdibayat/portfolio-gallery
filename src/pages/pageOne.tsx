@@ -1,10 +1,12 @@
 import Masonry from "@mui/lab/Masonry";
-import { Box, Paper, Typography } from "@mui/material";
+import { Box, Typography, useTheme } from "@mui/material";
 
 import MasonItem from "../components/masonItem";
 import { pagesSignal } from "../state/pageSignal";
 
 export default function PageOne() {
+  
+  const t = useTheme()
   return (
     <Box
       sx={{
@@ -20,6 +22,11 @@ export default function PageOne() {
       <Masonry
         columns={{xs:1, sm:2, md:3}}
         spacing={3}
+        sx={{
+          [t.breakpoints.down('md')]: {
+            m: '0'
+          }
+        }}
       >
         <MasonItem
           imgUrl="/images/8.png"

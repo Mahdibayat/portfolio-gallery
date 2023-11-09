@@ -1,10 +1,9 @@
-import { Box, Grid, Stack, Typography } from '@mui/material'
-import React from 'react'
+import { Grid, Stack, Typography } from '@mui/material'
 import { Link } from 'react-router-dom'
 
 export default function Poems() {
   return (
-    <Grid container spacing={5} sx={{p: {xs:2,md:5}, justifyContent:'center', mt:5}} >
+    <Grid container spacing={5} sx={{justifyContent:'center', mt:5}} >
       <Grid item xs={12} md={6}>
         <Link to={'/app/poems/poems'}>
           <Stack
@@ -30,7 +29,7 @@ export default function Poems() {
         </Link>
       </Grid>
 
-      <Grid item xs={12} md={6}>
+      <Grid item xs={12} md={6} sx={{display:'flex', justifyContent:'center'}}>
         <Link to={"/app/poems/A-room-for-one's-won"}>
           <Stack
             sx={{

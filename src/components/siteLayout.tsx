@@ -1,13 +1,11 @@
-import { Box, Container, Drawer, Fade, IconButton, Stack, Tab, Tabs, Typography, useMediaQuery } from "@mui/material";
-import { Link, Navigate, Outlet } from "react-router-dom";
-import InstagramIcon from '@mui/icons-material/Instagram';
 import EmailIcon from '@mui/icons-material/Email';
+import InstagramIcon from '@mui/icons-material/Instagram';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
-import {useNavigate} from 'react-router-dom'
 import MenuIcon from '@mui/icons-material/Menu';
-import { pagesSignal } from "../state/pageSignal";
-import { Theme } from "@emotion/react";
+import { Container, Drawer, IconButton, Stack, Tab, Tabs, Typography, useMediaQuery } from "@mui/material";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 import { menuDrawerSignal } from "../state/menuDrawerSignal";
+import { pagesSignal } from "../state/pageSignal";
 
 export default function SiteLayout() {
   const navigate = useNavigate();

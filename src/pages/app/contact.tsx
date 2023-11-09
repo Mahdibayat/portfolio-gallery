@@ -1,76 +1,76 @@
-import { Box, Grid, Paper, Stack, Typography } from '@mui/material'
-import React from 'react'
-import { Link } from 'react-router-dom'
-import InstagramIcon from '@mui/icons-material/Instagram';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 import CallIcon from '@mui/icons-material/Call';
+import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import { Box, Stack, Typography } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 export default function Contact() {
   return (
-    <Grid
-      container
-      spacing={2}
+    <Box
       sx={{
-        height: "80vh",
+        width:1,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        minHeight:'80vh',
+        my:{xs:5, md:1}
       }}
     >
-      <Grid item xs={12} sm={6} md={6}  sx={{alignSelf: 'center'}}>
-        <Stack
-          component={Paper}
-          gap={5}
-          sx={{
-            maxWidth: '400px',
-            minHeight: '332px',
-            ml: 'auto',
-            borderRadius: 3,
-            p:2
-          }}
-        >
-          <Typography
-            sx={{
-              textAlign:'center',
-              fontWeight: 'bold',
-              fontSize: '1.3rem'
-            }}
-          >Contact Samaneh Sarchame</Typography>
+      <Stack direction={{xs:'column', md:'row'}} gap={3} justifyContent={'space-between'} alignItems={'center'}
+        sx={{
+          bgcolor:'secondary.main',
+          p: 3,
+          borderRadius: 3,
+          boxShadow:3,
+          width: 1,
+          m: 1,
+          maxWidth:'900px'
+        }}
+      >
+        <Stack justifyContent={'space-around'} gap={6} >
+            <Typography component={'h1'} variant='h4' className='font-pacifico'
+              sx={{
+                fontFamily: "Pacifico",
+                color:'secondary.dark',
+              }}
+            >
+            Contact Us
+            </Typography>
 
-          <Stack gap={2} pl={2}>
-            <Link to={"#"}>
-              <Stack direction={'row'} gap={1}>
-                <InstagramIcon />
-                <Typography>Instagram</Typography>
-              </Stack>
-            </Link>
+            <Stack gap={1}>
+              <Link to={"#"}>
+                <Stack direction={'row'} gap={1}>
+                  <InstagramIcon />
+                  <Typography sx={{textDecoration:'underline', color:'primary.main'}}>Instagram</Typography>
+                </Stack>
+              </Link>
 
-            <Link to={"mailto:samaneh.sarchami777@gmail.com"}>
-              <Stack direction={'row'} gap={1}>
-                <AlternateEmailIcon />
-                <Typography>E-mail</Typography>
-              </Stack>
-            </Link>
+              <Link to={"mailto:samaneh.sarchami777@gmail.com"}>
+                <Stack direction={'row'} gap={1}>
+                  <AlternateEmailIcon />
+                  <Typography sx={{textDecoration:'underline', color:'primary.main'}}>E-mail</Typography>
+                </Stack>
+              </Link>
 
-            <Link to={"mailto:samaneh.sarchami777@gmail.com"}>
-              <Stack direction={'row'} gap={1}>
-                <CallIcon />
-                <Typography>+98 937 372 5256</Typography>
-              </Stack>
-            </Link>
-          </Stack>
+              <Link to={"mailto:samaneh.sarchami777@gmail.com"}>
+                <Stack direction={'row'} gap={1}>
+                  <CallIcon />
+                  <Typography sx={{textDecoration:'underline', color:'primary.main'}}>+98 937 372 5256</Typography>
+                </Stack>
+              </Link>
+            </Stack>
         </Stack>
-      </Grid>
 
-      <Grid item xs={12} sm={6} md={6} sx={{alignSelf: 'center'}}>
-        <Paper
-          sx={{
-            p:1,
-            width:1,
-            maxWidth:'400px',
-            borderRadius: 3,
-          }}
-        >
-          <img src={"/images/13.jpg"} alt='' style={{width:'100%'}} />
-        </Paper>
-      </Grid>
-    </Grid>
+        
+        <ConnectWithoutContactIcon sx={{
+          fontSize:'6rem',
+          color:'secondary.dark'
+        }} />
+
+            
+        <img src={"/images/13.jpg"} alt='' style={{height:'300px', width:'100%', maxWidth:'300px', objectFit:'contain'}} />  
+      </Stack>
+    </Box>
   )
 }

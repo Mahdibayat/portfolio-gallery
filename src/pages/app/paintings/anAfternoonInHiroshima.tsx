@@ -38,7 +38,7 @@ export default function AnAfternoonInHiroshima() {
       }}
     >
       <Stack alignItems={'center'}>
-        <Typography  component={'h1'} variant={'h2'} sx={{mb: 2, mt:1}}>An Afternoon In Hiroshima</Typography>
+        <Typography  component={'h1'} variant={'h2'} sx={{mb: 5, mt:2, fontSize:{xs:'1.4rem', md:'3rem'}}}>An Afternoon In Hiroshima</Typography>
       </Stack>
 
       
@@ -57,6 +57,7 @@ export default function AnAfternoonInHiroshima() {
         pagination={true}
         modules={[EffectCoverflow, Pagination]}
         onClick={() => setOpen(true)}
+        loop={true}
       >
         <SwiperSlide>
           <img src="/images/20.jpg" alt=''  />

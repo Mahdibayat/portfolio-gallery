@@ -1,36 +1,34 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 import 'swiper/css';
 // import 'swiper/css/effect-coverflow';
-import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import "yet-another-react-lightbox/styles.css";
+import 'swiper/css/pagination';
 import "yet-another-react-lightbox/plugins/thumbnails.css";
-import './index.css'
+import "yet-another-react-lightbox/styles.css";
+import './index.css';
 
-import {
-  BrowserRouter,
-  createBrowserRouter,
-  Navigate,
-  Route,
-  RouterProvider,
-  Routes,
-} from "react-router-dom";
-import StartPage from './pages/startPage.tsx';
 import { ThemeProvider } from '@emotion/react';
 import { createTheme } from '@mui/material';
-import PageOne from './pages/pageOne.tsx';
+import {
+  BrowserRouter,
+  Navigate,
+  Route,
+  Routes
+} from "react-router-dom";
 import SiteLayout from './components/siteLayout.tsx';
-import Paintings from './pages/app/paintings.tsx';
-import Poems from './pages/app/poems.tsx';
-import CVPage from './pages/app/cv.tsx';
+import ARoomForOnesWon from './pages/app/aRoomForOnesWon.tsx';
 import Contact from './pages/app/contact.tsx';
-import ScatteredPaints from './pages/app/paintings/scattered.tsx';
+import CVPage from './pages/app/cv.tsx';
+import Paintings from './pages/app/paintings.tsx';
+import AestheticsOfSuffering from './pages/app/paintings/aestheticsOfSuffering.tsx';
 import AllAroundMe from './pages/app/paintings/allAroundMe.tsx';
 import AnAfternoonInHiroshima from './pages/app/paintings/anAfternoonInHiroshima.tsx';
-import AestheticsOfSuffering from './pages/app/paintings/aestheticsOfSuffering.tsx';
+import ScatteredPaints from './pages/app/paintings/scattered.tsx';
 import ThatDay from './pages/app/paintings/thatDay.tsx';
-import ARoomForOnesWon from './pages/app/aRoomForOnesWon.tsx';
+import Poems from './pages/app/poems.tsx';
+import PageOne from './pages/pageOne.tsx';
+import StartPage from './pages/startPage.tsx';
 
 const theme = createTheme({
   breakpoints: {
