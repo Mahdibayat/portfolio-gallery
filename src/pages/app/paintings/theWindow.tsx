@@ -1,6 +1,6 @@
 import { Box, Typography, useTheme } from '@mui/material';
 import React from 'react'
-import BackButton from '../../../components/BackButton';
+import BackButton from '../../../components/backButton';
 import { Masonry } from '@mui/lab';
 import MasonItem from '../../../components/masonItem';
 import Lightbox from 'yet-another-react-lightbox';

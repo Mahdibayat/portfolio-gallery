@@ -5,7 +5,7 @@ import { EffectCoverflow, Pagination } from 'swiper/modules';
 
 import Lightbox from "yet-another-react-lightbox";
 import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
-import BackButton from '../../../components/BackButton';
+import BackButton from '../../../components/backButton';
 
 export default function ThatDay() {
   const [open, setOpen] = React.useState(false);

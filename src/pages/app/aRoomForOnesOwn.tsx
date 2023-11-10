@@ -4,8 +4,8 @@ import React from 'react';
 import { Masonry } from '@mui/lab';
 import Lightbox from "yet-another-react-lightbox";
 import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
-import BackButton from '../../components/BackButton';
 import MasonItem from '../../components/masonItem';
+import BackButton from '../../components/backButton';
 
 export default function ARoomForOnesOwn() {
   const [open, setOpen] = React.useState(false);
@@ -14,8 +14,8 @@ export default function ARoomForOnesOwn() {
   return (
     
     <>
+    <BackButton />
     <Box sx={{ mt: 2 }}>
-      <BackButton />
       <Typography
         component={"h1"}
         sx={{

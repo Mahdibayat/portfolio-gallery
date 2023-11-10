@@ -30,7 +30,7 @@ export default function Contact() {
         <Stack justifyContent={'space-around'} gap={6} pl={{xs:2,md:5}} >
             <Typography component={'h1'} variant='h4'
               sx={{
-                color:'secondary.dark',
+                color:'secondary.light',
               }}
             >
             Contact Us
@@ -39,22 +39,22 @@ export default function Contact() {
             <Stack gap={1}>
               <Link to={"#"}>
                 <Stack direction={'row'} gap={1}>
-                  <InstagramIcon />
-                  <Typography sx={{textDecoration:'underline', color:'primary.main'}}>Instagram</Typography>
+                  <InstagramIcon sx={{color:'secondary.light'}} />
+                  <Typography sx={{textDecoration:'underline', color:'secondary.light'}}>Instagram</Typography>
                 </Stack>
               </Link>
 
               <Link to={"mailto:samaneh.sarchami777@gmail.com"}>
                 <Stack direction={'row'} gap={1}>
-                  <AlternateEmailIcon />
-                  <Typography sx={{textDecoration:'underline', color:'primary.main'}}>E-mail</Typography>
+                  <AlternateEmailIcon  sx={{color:'secondary.light'}} />
+                  <Typography sx={{textDecoration:'underline', color:'secondary.light'}}>E-mail</Typography>
                 </Stack>
               </Link>
 
               <Link to={"mailto:samaneh.sarchami777@gmail.com"}>
                 <Stack direction={'row'} gap={1}>
-                  <CallIcon />
-                  <Typography sx={{textDecoration:'underline', color:'primary.main'}}>+98 937 372 5256</Typography>
+                  <CallIcon  sx={{color:'secondary.light'}} />
+                  <Typography sx={{textDecoration:'underline', color:'secondary.light'}}>+98 937 372 5256</Typography>
                 </Stack>
               </Link>
             </Stack>

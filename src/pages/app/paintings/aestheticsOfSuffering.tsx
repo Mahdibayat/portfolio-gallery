@@ -1,12 +1,10 @@
-import { Box, Stack, Typography, useTheme } from '@mui/material'
-import React from 'react'
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectCoverflow, Pagination } from 'swiper/modules';
+import { Box, Typography, useTheme } from '@mui/material';
+import React from 'react';
 
+import { Masonry } from '@mui/lab';
 import Lightbox from "yet-another-react-lightbox";
 import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
-import BackButton from '../../../components/BackButton';
-import { Masonry } from '@mui/lab';
+import BackButton from '../../../components/backButton';
 import MasonItem from '../../../components/masonItem';
 
 export default function AestheticsOfSuffering() {

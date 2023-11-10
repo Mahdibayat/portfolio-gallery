@@ -26,22 +26,22 @@ export default function CVPage() {
             <Stack gap={1} sx={{mt:2}}>
               <Link to={'mailto:samaneh.sarchami777@gmail.com'}>
                 <Stack direction={'row'} gap={1}>
-                  <AlternateEmailIcon />
-                  <Typography sx={{textDecoration:'underline', color:'primary.main', overflow:'clip'}}>samaneh.sarchami777@gmail.com</Typography>
+                  <AlternateEmailIcon sx={{color:'secondary.light'}}/>
+                  <Typography sx={{textDecoration:'underline', color:'secondary.light', overflow:'clip'}}>samaneh.sarchami777@gmail.com</Typography>
                 </Stack>
               </Link>
 
               <Link to={'tel:+989373725256'}>
                 <Stack direction={'row'} gap={1}>
-                  <CallIcon />
-                  <Typography sx={{textDecoration:'underline', color:'primary.main'}}>+98 937 372 5256</Typography>
+                  <CallIcon sx={{color:'secondary.light'}}/>
+                  <Typography sx={{textDecoration:'underline', color:'secondary.light'}}>+98 937 372 5256</Typography>
                 </Stack>
               </Link>
 
               <a download={true} href={"/cv-Sarchami.pdf"} >
                 <Stack direction={'row'} gap={1}>
-                  <DownloadIcon />
-                  <Typography sx={{textDecoration:'underline', color:'primary.main'}}>DownLoad CV</Typography>
+                  <DownloadIcon sx={{color:'secondary.light'}}/>
+                  <Typography sx={{textDecoration:'underline', color:'secondary.light'}}>DownLoad CV</Typography>
                 </Stack>
               </a>
             </Stack>
@@ -58,6 +58,7 @@ export default function CVPage() {
             justifyContent:'center',
             alignItems:'center',
             ml: 'auto',
+            opacity: '.65'
           }}>
             <img src={"/images/14.jpg"} alt='samaneh sarchami' style={{
               width:'100%',
@@ -78,7 +79,7 @@ export default function CVPage() {
           mb: 6,
         }}
       >
-        <Typography component={'h3'} variant='h4'>EDUCATION</Typography>
+        <Typography component={'h3'} sx={{color:"secondary.light"}} variant='h4'>EDUCATION</Typography>
         <Typography>MFA in Painting, Azad University, Tehran, (2011-2014) Thesis: Aesthetics of suffering, Iranian contemporary painting in social context</Typography>
         <Typography>BFA in Painting, University of Art, Tehran, (2003-2007) Thesis: Imaginary of Nuclear Weapons in Asia</Typography>
         <Typography>Associate Degree in Graphic Design, Alzahra Institute, Mashhad, (1995-1998) Thesis: Investigating the role of mythology on Iranian kilims</Typography>
@@ -86,7 +87,7 @@ export default function CVPage() {
 
         <br />
 
-        <Typography component={'h3'} variant='h4'>EDITOR</Typography>
+        <Typography component={'h3'} variant='h4' sx={{color:"secondary.light"}}>EDITOR</Typography>
         <Typography>Asre Ertebat Newspaper, Tehran, (2016-2017)</Typography>
         <Typography>Shahrvand Newspaper, Tehran, (2015-2016)</Typography>
         <Typography>Art and Media Magazine, Tehran, (2015)</Typography>
@@ -99,7 +100,7 @@ export default function CVPage() {
 
         <br />
         
-        <Typography component={'h3'} variant='h4'>PUBLISHED REVIEW</Typography>
+        <Typography component={'h3'} sx={{color:"secondary.light"}} variant='h4'>PUBLISHED REVIEW</Typography>
         <Typography>Honar Agah Magazine, (2018) For Aleppo, a review of Javad Modarresi’s artworks, Artin Art Gallery, Mashhad</Typography>
         <Typography>Honar Agah Magazine, (2016) Mahta Mashayeki Exhibition, a review of Mahta Mashayekhi’s exhibition, Radin Art Gallery, Mashhad</Typography>
         <Typography>Art and Media Magazine, (2015) Life, a review of Reza Lavasani’s installation, Asar Art Gallery, Tehran</Typography>
@@ -108,7 +109,7 @@ export default function CVPage() {
 
         <br />
 
-        <Typography component={'h3'} variant='h4'>EXHIBITION</Typography>
+        <Typography component={'h3'} variant='h4' sx={{color:"secondary.light"}}>EXHIBITION</Typography>
         <Typography>The beauty of Suffering, Ravand Art Gallery, Mashhad, (2021)</Typography>
         <Typography>The Beauty of Suffering, Azad University Gallery, Tehran, (2014)</Typography>
         <Typography>The Windows, Performance, Azad University Gallery, Tehran, (2013)</Typography>
@@ -116,7 +117,7 @@ export default function CVPage() {
 
         <br />
         
-        <Typography component={'h3'} variant='h4'>TEACHING EXPERIENCE</Typography>
+        <Typography component={'h3'} sx={{color:"secondary.light"}} variant='h4'>TEACHING EXPERIENCE</Typography>
         <Typography>Radin Art Gallery, Mashhad, (2022-Present) Courses: Painting, Drawing, Photography</Typography>
         <Typography>University of Art and Culture, Mashhad, (2020-2022) Courses: Aesthetics, Photography</Typography>
         <Typography>Art History, Radin Art Gallery, Mashhad, (2019-2020) Courses: The evolution of European art from ancient times to realism</Typography>
@@ -126,7 +127,7 @@ export default function CVPage() {
 
         <br />
         
-        <Typography component={'h3'} variant='h4'>PUBLICATION</Typography>
+        <Typography component={'h3'} sx={{color:"secondary.light"}} variant='h4'>PUBLICATION</Typography>
         <Typography>On the other side of camera, Pargar publication, Tehran, 2013 Editing the book</Typography>
         <Typography>Hamin Farda Bood magazine, Tehran, 2008 A multi-poet (19 poets) for one poetry (the first 19 poets for Ghazal (a style of Persian poetry)</Typography>
         <Typography>Aghaze Enhena, Mashhad, 2002 A Poem</Typography>
@@ -135,7 +136,7 @@ export default function CVPage() {
         <br />
 
         
-        <Typography component={'h3'} variant='h4'>GRAPHIC DESIGN</Typography>
+        <Typography component={'h3'} sx={{color:"secondary.light"}} variant='h4'>GRAPHIC DESIGN</Typography>
         <Typography>Forsat-e-Emrooz Newspaper, Tehran, 2014 Designer</Typography>
         <Typography>Singer Company, Tehran, 2009-2010 Advertising expert</Typography>
         <Typography>Honare Farda Company, Mashhad, 1999-2000 Graphic designer</Typography>
@@ -143,7 +144,7 @@ export default function CVPage() {
 
         <br />
 
-        <Typography component={'h3'} variant='h4'>Computer SKILLS</Typography>
+        <Typography component={'h3'} sx={{color:"secondary.light"}} variant='h4'>Computer SKILLS</Typography>
         <ul>
           <li>InDesign</li>
           <li>Photoshop</li>
@@ -154,7 +155,7 @@ export default function CVPage() {
 
         <br />
         
-        <Typography component={'h3'} variant='h4'>LANGUAGES</Typography>
+        <Typography component={'h3'} sx={{color:"secondary.light"}} variant='h4'>LANGUAGES</Typography>
         <ul>
           <li>Farsi (Native)</li>
           <li>English (Advanced)</li>

@@ -1,20 +1,22 @@
-import Masonry from "@mui/lab/Masonry";
-import { Box, Typography, useTheme } from "@mui/material";
+import { Box, Typography, useMediaQuery } from "@mui/material";
 
-import MasonItem from "../components/masonItem";
-import { pagesSignal } from "../state/pageSignal";
 import { Timeline } from "@mui/lab";
 import TimeLineItem from "../components/timeLineItem";
+import { Theme } from "@emotion/react";
 
 export default function PageOne() {
+  const isMobile = useMediaQuery((t: any) => t.breakpoints.down('md'))
   
-  const t = useTheme()
   return (
     <Box
       sx={{
         width: 1,
         maxWidth: '1200px',
         m:'30px auto 20px',
+        ".MuiTimeline-positionRight": {
+          transform: 'translateX(-138px)',
+          width: 'calc(100% + 150px)',
+        }
       }}
     >
       <Typography
@@ -23,7 +25,7 @@ export default function PageOne() {
       >At a glance</Typography>
 
 
-<Timeline position="alternate">
+      <Timeline position={isMobile ? "right" : "alternate-reverse"}>
       <TimeLineItem
         imgUrl="/images/26.jpg"
         aspectRatio="0.87 / 1"
@@ -72,7 +74,7 @@ export default function PageOne() {
         aspectRatio="1.33 / 1"
         link="/app/poems/A-room-for-one's-won"
         title="A room for one's own"
-        time="(2018 - 2020)"
+        time={<Typography>(2018 <br/> 2020)</Typography>}
       />
 
       <TimeLineItem

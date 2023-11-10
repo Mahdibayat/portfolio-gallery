@@ -1,15 +1,13 @@
 
-import { Swiper, SwiperSlide } from 'swiper/react';
 
-import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 
-import { Box, Stack, Typography, useTheme } from '@mui/material';
-import BackButton from '../../../components/BackButton';
 import { Masonry } from '@mui/lab';
-import MasonItem from '../../../components/masonItem';
-import Lightbox from 'yet-another-react-lightbox';
+import { Box, Typography, useTheme } from '@mui/material';
 import { useState } from 'react';
+import Lightbox from 'yet-another-react-lightbox';
 import { Thumbnails } from 'yet-another-react-lightbox/plugins';
+import BackButton from '../../../components/backButton';
+import MasonItem from '../../../components/masonItem';
 
 export default function MiddleEve() {
   const [open, setOpen] = useState(false);

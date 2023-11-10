@@ -35,7 +35,7 @@ export default function SiteLayout() {
         <Link to={'/app'} onClick={()=> pagesSignal.value = null}>
           <Typography sx={{
             fontSize:'1.5rem',
-            color: !pagesSignal.value ? 'primary.dark' : undefined,
+            color: !pagesSignal.value ? 'primary.dark' : 'secondary.light',
             transition: 'color 500ms'
         }}>Samaneh Sarchami</Typography>
         </Link>

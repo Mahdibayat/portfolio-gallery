@@ -12,6 +12,7 @@ export default function Poems() {
               width: 1,
               maxWidth: '700px',
               height:1,
+              alignItems:'center',
               justifyContent: 'space-between',
               ":hover": {
                 ">h3": {
@@ -22,7 +23,8 @@ export default function Poems() {
           >
             <img src={'/images/39.jpeg'} alt="" style={{ width:"100%", height:'100%', aspectRatio:"1.33 / 1", objectFit: 'contain',
               filter: 'contrast(339%)',
-              WebkitFilter: 'contrast(339%)'      
+              WebkitFilter: 'contrast(339%)',
+              maxWidth:'450px'      
           }} />
             <Typography component={'h3'} sx={{fontSize: '2rem', color: 'secondary.dark', textAlign: 'center', pt:2, transition: '500ms'}}>Poems Store</Typography>
           </Stack>

@@ -4,7 +4,7 @@ import React from "react";
 import { Masonry } from "@mui/lab";
 import Lightbox from "yet-another-react-lightbox";
 import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
-import BackButton from "../../../components/BackButton";
+import BackButton from "../../../components/backButton";
 import MasonItem from "../../../components/masonItem";
 
 export default function AnAfternoonInHiroshima() {
