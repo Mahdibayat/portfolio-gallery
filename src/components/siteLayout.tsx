@@ -48,6 +48,7 @@ export default function SiteLayout() {
             :
             <Stack component='nav' alignItems={'center'}>
               <Tabs onChange={handleChangeRoute} value={pagesSignal.value}>
+                {/* <Tab value='/app' label="Timeline" /> */}
                 <Tab value='paintings' label="Paintings" />
                 <Tab value='poems' label="Poems" />
                 <Tab value='CV' label="CV" />
@@ -120,6 +121,7 @@ export default function SiteLayout() {
         }} value={pagesSignal.value} orientation="vertical"
           sx={{ml:'auto', textAlign:'center', width:1, mt: '20vh' }}
         >
+          <Tab sx={{color:'white'}} value='/app' label="Timeline" />
           <Tab sx={{color:'white'}} value='paintings' label="Paintings" />
           <Tab sx={{color:'white'}} value='poems' label="Poems" />
           <Tab sx={{color:'white'}} value='CV' label="CV" />

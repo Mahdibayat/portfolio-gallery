@@ -31,6 +31,7 @@ import PageOne from './pages/pageOne.tsx';
 import StartPage from './pages/startPage.tsx';
 import Stigmata from './pages/app/stigmata.tsx';
 import TheWindow from './pages/app/paintings/theWindow.tsx';
+import ScrollToTop from './components/scrollToTop.tsx';
 
 const theme = createTheme({
   breakpoints: {
@@ -69,6 +70,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<StartPage />} />
 
