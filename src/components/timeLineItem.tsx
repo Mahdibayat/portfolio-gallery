@@ -1,5 +1,5 @@
 import { TimelineConnector, TimelineContent, TimelineDot, TimelineItem, TimelineOppositeContent, TimelineSeparator } from '@mui/lab'
-import { Box, Typography, useMediaQuery } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import { ReactNode } from 'react'
 
 import { Link } from 'react-router-dom'
@@ -13,7 +13,6 @@ interface GalleryMasonItemType {
 }
 
 export default function TimeLineItem({imgUrl, title, aspectRatio, link, time}: GalleryMasonItemType) {
-  const isMobile = useMediaQuery((t: any) => t.breakpoints.down('md'))
 
   return (
       <TimelineItem>

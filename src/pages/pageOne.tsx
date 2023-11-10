@@ -2,7 +2,6 @@ import { Box, Typography, useMediaQuery } from "@mui/material";
 
 import { Timeline } from "@mui/lab";
 import TimeLineItem from "../components/timeLineItem";
-import { Theme } from "@emotion/react";
 
 export default function PageOne() {
   const isMobile = useMediaQuery((t: any) => t.breakpoints.down('md'))
