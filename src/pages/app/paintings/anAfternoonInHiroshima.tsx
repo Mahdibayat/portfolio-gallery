@@ -1,5 +1,5 @@
 import { Box, Typography, useTheme } from "@mui/material";
-import React from "react";
+import React, { useEffect } from "react";
 
 import { Masonry } from "@mui/lab";
 import Lightbox from "yet-another-react-lightbox";
@@ -8,8 +8,14 @@ import BackButton from "../../../components/backButton";
 import MasonItem from "../../../components/masonItem";
 
 export default function AnAfternoonInHiroshima() {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState<false | number>(false);
   const t = useTheme();
+
+  useEffect(()=>{
+    return () =>{
+      setOpen(false)
+    }
+  }, [])
 
   return (
     <Box sx={{ mt: 2 }}>
@@ -38,73 +44,74 @@ export default function AnAfternoonInHiroshima() {
         <MasonItem
           imgUrl="/images/20.jpg"
           aspectRatio="0.73 / 1"
-          onClick={()=>setOpen(true)}
+          onClick={()=>setOpen(0)}
         />
 
         <MasonItem
           imgUrl="/images/1.jpg"
           aspectRatio="0.83 / 1"
-          onClick={()=>setOpen(true)}
+          onClick={()=>setOpen(1)}
         />
 
         <MasonItem
           imgUrl="/images/26.jpg"
           aspectRatio="0.87 / 1"
-          onClick={()=>setOpen(true)}
+          onClick={()=>setOpen(2)}
         />
 
         <MasonItem
           imgUrl="/images/22.jpg"
           aspectRatio="0.73 / 1"
-          onClick={()=>setOpen(true)}
+          onClick={()=>setOpen(3)}
         />
 
         <MasonItem
           imgUrl="/images/27.jpg"
           aspectRatio="0.8 / 1"
-          onClick={()=>setOpen(true)}
+          onClick={()=>setOpen(4)}
         />
 
         <MasonItem
           imgUrl="/images/23.jpg"
           aspectRatio="0.75 / 1"
-          onClick={()=>setOpen(true)}
+          onClick={()=>setOpen(5)}
         />
 
         <MasonItem
           imgUrl="/images/24.jpg"
           aspectRatio="0.73 / 1"
-          onClick={()=>setOpen(true)}
+          onClick={()=>setOpen(6)}
         />
         <MasonItem
           imgUrl="/images/29.jpg"
           aspectRatio="0.81 / 1"
-          onClick={()=>setOpen(true)}
+          onClick={()=>setOpen(7)}
         />
 
         <MasonItem
           imgUrl="/images/25.jpg"
           aspectRatio="0.8 / 1"
-          onClick={()=>setOpen(true)}
+          onClick={()=>setOpen(8)}
         />
 
         <MasonItem
           imgUrl="/images/21.jpg"
           aspectRatio="0.72 / 1"
-          onClick={()=>setOpen(true)}
+          onClick={()=>setOpen(9)}
         />
 
         <MasonItem
           imgUrl="/images/28.jpg"
           aspectRatio="0.89 / 1"
-          onClick={()=>setOpen(true)}
+          onClick={()=>setOpen(10)}
         />
       </Masonry>
 
       <Lightbox
-        open={open}
+        open={open !== false}
         close={() => setOpen(false)}
         plugins={[Thumbnails]}
+        index={open ? open : 0}
         slides={[
           { src: "/images/20.jpg" },
           { src: "/images/1.jpg" },

@@ -9,7 +9,7 @@ import MasonItem from '../../../components/masonItem';
 
 export default function AestheticsOfSuffering() {
   
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState<false | number>(false);
   const t = useTheme()
   
   return (
@@ -42,45 +42,48 @@ export default function AestheticsOfSuffering() {
         <MasonItem
           imgUrl="/images/30.jpg"
           aspectRatio="1 / 1"
-          onClick={()=>setOpen(true)}
+          onClick={()=>setOpen(0)}
         />
         <MasonItem
           imgUrl="/images/12.jpg"
           aspectRatio="1.79 / 1"
-          onClick={()=>setOpen(true)}
+          onClick={()=>setOpen(1)}
         />
         <MasonItem
           imgUrl="/images/31.jpg"
           aspectRatio="1 / 1"
-          onClick={()=>setOpen(true)}
+          onClick={()=>setOpen(2)}
         />
         <MasonItem
           imgUrl="/images/13.jpg"
           aspectRatio="1 / 1"
-          onClick={()=>setOpen(true)}
+          onClick={()=>setOpen(3)}
         />
 
         <MasonItem
           imgUrl="/images/32.jpg"
           aspectRatio="1 / 1"
-          onClick={()=>setOpen(true)}
+          onClick={()=>setOpen(4)}
         />
         <MasonItem
           imgUrl="/images/33.jpg"
           aspectRatio="1 / 1"
-          onClick={()=>setOpen(true)}
+          onClick={()=>setOpen(5)}
         />
       </Masonry>
     </Box>
 
       
       <Lightbox
-        open={open}
+        open={open !== false}
+        index={open ? open : 0}
         close={() => setOpen(false)}
         plugins={[Thumbnails]}
         slides={[
           { src: "/images/30.jpg" },
+          { src: "/images/12.jpg" },
           { src: "/images/31.jpg" },
+          { src: "/images/13.jpg" },
           { src: "/images/32.jpg" },
           { src: "/images/33.jpg" },
         ]}

@@ -7,7 +7,7 @@ import Lightbox from 'yet-another-react-lightbox';
 import { Thumbnails } from 'yet-another-react-lightbox/plugins';
 
 export default function TheWindow() {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState<false | number>(false);
   const t = useTheme();
 
   return (
@@ -37,24 +37,25 @@ export default function TheWindow() {
         <MasonItem
           imgUrl="/images/48.jpg"
           aspectRatio="4 / 3"
-          onClick={()=>setOpen(true)}
+          onClick={()=>setOpen(0)}
         />
 
         <MasonItem
           imgUrl="/images/49.jpg"
           aspectRatio="1.42 / 1"
-          onClick={()=>setOpen(true)}
+          onClick={()=>setOpen(1)}
         />
 
         <MasonItem
           imgUrl="/images/50.jpg"
           aspectRatio="1.5 / 1"
-          onClick={()=>setOpen(true)}
+          onClick={()=>setOpen(2)}
         />
       </Masonry>
 
       <Lightbox
-        open={open}
+        open={open !== false}
+        index={open ? open : 0}
         close={() => setOpen(false)}
         plugins={[Thumbnails]}
         slides={[

@@ -10,7 +10,7 @@ import BackButton from '../../../components/backButton';
 import MasonItem from '../../../components/masonItem';
 
 export default function MiddleEve() {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState<false | number>(false);
   const t = useTheme();
 
   return (
@@ -40,38 +40,39 @@ export default function MiddleEve() {
         <MasonItem
           imgUrl="/images/46.jpg"
           aspectRatio="0.88 / 1"
-          onClick={()=>setOpen(true)}
+          onClick={()=>setOpen(0)}
         />
 
         <MasonItem
           imgUrl="/images/47.jpg"
           aspectRatio="0.67 / 1"
-          onClick={()=>setOpen(true)}
+          onClick={()=>setOpen(1)}
         />
 
         <MasonItem
           imgUrl="/images/15.png"
           aspectRatio="0.73 / 1"
-          onClick={()=>setOpen(true)}
+          onClick={()=>setOpen(2)}
         />
 
         <MasonItem
           imgUrl="/images/8.png"
           aspectRatio="0.73 / 1"
-          onClick={()=>setOpen(true)}
+          onClick={()=>setOpen(3)}
         />
 
       </Masonry>
 
       <Lightbox
-        open={open}
+        open={open !== false}
         close={() => setOpen(false)}
+        index={open ? open : 0}
         plugins={[Thumbnails]}
         slides={[
-          { src: "/images/15.png" },
-          { src: "/images/8.png" },
           { src: "/images/46.jpg" },
           { src: "/images/47.jpg" },
+          { src: "/images/15.png" },
+          { src: "/images/8.png" },
         ]}
       />
     </Box>

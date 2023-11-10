@@ -8,7 +8,7 @@ import BackButton from '../../../components/backButton';
 import MasonItem from '../../../components/masonItem';
 
 export default function ThatDay() {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState<false | number>(false);
   const t = useTheme();
 
   return (
@@ -41,31 +41,32 @@ export default function ThatDay() {
           <MasonItem
             imgUrl="/images/34.jpg"
             aspectRatio="1.22 / 1"
-            onClick={()=>setOpen(true)}
+            onClick={()=>setOpen(0)}
           />
 
           <MasonItem
             imgUrl="/images/35.jpg"
             aspectRatio="1.1 / 1"
-            onClick={()=>setOpen(true)}
+            onClick={()=>setOpen(1)}
           />
 
           <MasonItem
             imgUrl="/images/36.jpg"
             aspectRatio="1.45 / 1"
-            onClick={()=>setOpen(true)}
+            onClick={()=>setOpen(2)}
           />
 
           <MasonItem
             imgUrl="/images/37.jpg"
             aspectRatio="1.48 / 1"
-            onClick={()=>setOpen(true)}
+            onClick={()=>setOpen(3)}
           />
         </Masonry>
       </Box>
       
       <Lightbox
-        open={open}
+        open={open !== false}
+        index={open ? open : 0}
         close={() => setOpen(false)}
         plugins={[Thumbnails]}
         slides={[

@@ -11,7 +11,7 @@ import MasonItem from '../../../components/masonItem';
 
 
 export default function AllAroundMe() {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState<false | number>(false);
   const t = useTheme();
 
   return (
@@ -44,31 +44,31 @@ export default function AllAroundMe() {
           <MasonItem
             imgUrl="/images/11.jpg"
             aspectRatio="1.2 / 1"
-            onClick={()=>setOpen(true)}
+            onClick={()=>setOpen(0)}
           />
 
           <MasonItem
             imgUrl="/images/16.jpg"
             aspectRatio="1.04 / 1"
-            onClick={()=>setOpen(true)}
+            onClick={()=>setOpen(1)}
           />
           
           <MasonItem
             imgUrl="/images/17.jpg"
             aspectRatio="1.04 / 1"
-            onClick={()=>setOpen(true)}
+            onClick={()=>setOpen(2)}
           />
           
           <MasonItem
             imgUrl="/images/18.jpg"
             aspectRatio="1.3 / 1"
-            onClick={()=>setOpen(true)}
+            onClick={()=>setOpen(3)}
           />
           
           <MasonItem
             imgUrl="/images/19.jpg"
             aspectRatio="1.19 / 1"
-            onClick={()=>setOpen(true)}
+            onClick={()=>setOpen(4)}
           />
 
           </Masonry>
@@ -76,9 +76,10 @@ export default function AllAroundMe() {
 
       
       <Lightbox
-        open={open}
+        open={open !== false}
         close={() => setOpen(false)}
         plugins={[Thumbnails]}
+        index={open? open : 0}
         slides={[
           { src: "/images/11.jpg" },
           { src: "/images/16.jpg" },

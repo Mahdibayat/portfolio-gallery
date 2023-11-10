@@ -8,7 +8,7 @@ import MasonItem from '../../components/masonItem';
 import BackButton from '../../components/backButton';
 
 export default function ARoomForOnesOwn() {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState<false | number>(false);
   const t = useTheme()
 
   return (
@@ -40,34 +40,35 @@ export default function ARoomForOnesOwn() {
         <MasonItem
           imgUrl="/images/38.jpeg"
           aspectRatio="0.56 / 1"
-          onClick={()=>setOpen(true)}
+          onClick={()=>setOpen(0)}
         />
         <MasonItem
           imgUrl="/images/39.jpeg"
           aspectRatio="1.33 / 1"
-          onClick={()=>setOpen(true)}
+          onClick={()=>setOpen(1)}
         />
         <MasonItem
           imgUrl="/images/40.jpeg"
           aspectRatio="1.78 / 1"
-          onClick={()=>setOpen(true)}
+          onClick={()=>setOpen(2)}
         />
         <MasonItem
           imgUrl="/images/41.jpeg"
           aspectRatio="1.48 / 1"
-          onClick={()=>setOpen(true)}
+          onClick={()=>setOpen(3)}
         />
         <MasonItem
           imgUrl="/images/42.jpeg"
           aspectRatio="1.33 / 1"
-          onClick={()=>setOpen(true)}
+          onClick={()=>setOpen(4)}
         />
       </Masonry>
     </Box>
 
       
       <Lightbox
-        open={open}
+        open={open !== false}
+        index={open? open : 0}
         close={() => setOpen(false)}
         plugins={[Thumbnails]}
         slides={[
