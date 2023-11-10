@@ -1,23 +1,19 @@
-import { Box, Stack, Typography, useTheme } from '@mui/material'
-import React from 'react'
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectCoverflow, Pagination } from 'swiper/modules';
+import { Box, Typography, useTheme } from '@mui/material';
+import React from 'react';
 
+import { Masonry } from '@mui/lab';
 import Lightbox from "yet-another-react-lightbox";
 import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
-import BackButton from '../../../components/BackButton';
-import { Masonry } from '@mui/lab';
-import MasonItem from '../../../components/masonItem';
+import BackButton from '../../components/BackButton';
+import MasonItem from '../../components/masonItem';
 
-export default function AestheticsOfSuffering() {
-  
+export default function ARoomForOnesOwn() {
   const [open, setOpen] = React.useState(false);
   const t = useTheme()
-  
+
   return (
     
     <>
-    
     <Box sx={{ mt: 2 }}>
       <BackButton />
       <Typography
@@ -30,7 +26,7 @@ export default function AestheticsOfSuffering() {
           pt: {xs:5, md:0},
         }}
       >
-        aesthetics of suffering (2014)
+        A room for one's won (2018- 2020)
       </Typography>
       <Masonry
         columns={{ xs: 1, sm: 2, md: 3, lg: 4 }}
@@ -42,34 +38,28 @@ export default function AestheticsOfSuffering() {
         }}
       >
         <MasonItem
-          imgUrl="/images/30.jpg"
-          aspectRatio="1 / 1"
+          imgUrl="/images/38.jpeg"
+          aspectRatio="0.56 / 1"
           onClick={()=>setOpen(true)}
         />
         <MasonItem
-          imgUrl="/images/12.jpg"
-          aspectRatio="1.79 / 1"
+          imgUrl="/images/39.jpeg"
+          aspectRatio="1.33 / 1"
           onClick={()=>setOpen(true)}
         />
         <MasonItem
-          imgUrl="/images/31.jpg"
-          aspectRatio="1 / 1"
+          imgUrl="/images/40.jpeg"
+          aspectRatio="1.78 / 1"
           onClick={()=>setOpen(true)}
         />
         <MasonItem
-          imgUrl="/images/13.jpg"
-          aspectRatio="1 / 1"
-          onClick={()=>setOpen(true)}
-        />
-
-        <MasonItem
-          imgUrl="/images/32.jpg"
-          aspectRatio="1 / 1"
+          imgUrl="/images/41.jpeg"
+          aspectRatio="1.48 / 1"
           onClick={()=>setOpen(true)}
         />
         <MasonItem
-          imgUrl="/images/33.jpg"
-          aspectRatio="1 / 1"
+          imgUrl="/images/42.jpeg"
+          aspectRatio="1.33 / 1"
           onClick={()=>setOpen(true)}
         />
       </Masonry>
@@ -81,10 +71,11 @@ export default function AestheticsOfSuffering() {
         close={() => setOpen(false)}
         plugins={[Thumbnails]}
         slides={[
-          { src: "/images/30.jpg" },
-          { src: "/images/31.jpg" },
-          { src: "/images/32.jpg" },
-          { src: "/images/33.jpg" },
+          { src: "/images/38.jpeg" },
+          { src: "/images/39.jpeg" },
+          { src: "/images/40.jpeg" },
+          { src: "/images/41.jpeg" },
+          { src: "/images/42.jpeg" },
         ]}
       />
     </>

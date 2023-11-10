@@ -1,6 +1,5 @@
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 import CallIcon from '@mui/icons-material/Call';
-import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import { Box, Stack, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
@@ -28,10 +27,9 @@ export default function Contact() {
           maxWidth:'900px'
         }}
       >
-        <Stack justifyContent={'space-around'} gap={6} >
-            <Typography component={'h1'} variant='h4' className='font-pacifico'
+        <Stack justifyContent={'space-around'} gap={6} pl={{xs:2,md:5}} >
+            <Typography component={'h1'} variant='h4'
               sx={{
-                fontFamily: "Pacifico",
                 color:'secondary.dark',
               }}
             >
@@ -62,11 +60,6 @@ export default function Contact() {
             </Stack>
         </Stack>
 
-        
-        <ConnectWithoutContactIcon sx={{
-          fontSize:'6rem',
-          color:'secondary.dark'
-        }} />
 
             
         <img src={"/images/13.jpg"} alt='' style={{height:'300px', width:'100%', maxWidth:'300px', objectFit:'contain'}} />  

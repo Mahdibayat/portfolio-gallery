@@ -22,19 +22,20 @@ export default function StartPage() {
             backgroundImage: 'url(/images/1.jpg)',
             backgroundSize:'contain',
             backgroundPosition:'bottom',
-            backgroundRepeat:'no-repeat'
+            backgroundRepeat:'no-repeat',
+            bgcolor: 'background.default'
           }}
         >
 
         <Stack gap={2} justifyContent={'center'} alignItems={'center'} sx={{width: 'inherit', pt: '7vh'}}>
           
           <Fade in={mounted} timeout={4000}>
-            <Typography component={'h1'} variant="h3" sx={{fontWeight: '700', color:'secondary.dark'}} >Portfolio</Typography>
+            <Typography component={'h1'} variant="h3" sx={{fontWeight: '700', color:'primary.main'}} >Portfolio</Typography>
           </Fade>
 
           
           <Fade in={mounted} timeout={5000}>
-            <Typography component={'h3'} variant="h5">Samaneh Sarchami</Typography>
+            <Typography component={'h3'} variant="h5" sx={{color:'primary.main'}}>Samaneh Sarchami</Typography>
           </Fade>
 
           <Zoom in={mounted} timeout={5000}>
@@ -58,32 +59,32 @@ export default function StartPage() {
     <Fade in={mounted} timeout={1000}>
       <Stack sx={{
           width: 1,
-          height: '100vh'
+          height: '100vh',
+          bgcolor:'background.default'
         }}
         direction={'row'}
         justifyContent={'space-between'}
       >
         <Box
           sx={{
-            filter: t => `drop-shadow(10px 0 20px ${t.palette.secondary.dark})`
+            filter: t => `drop-shadow(10px 0 20px ${t.palette.secondary.main})`
           }}
         >
           <img src={'/images/1.jpg'} alt='' style={{
             height: '99vh',
             width: "auto",
-            borderRadius: '0 30px 30px 0'
           }} />
         </Box>
 
         <Stack gap={2} justifyContent={'center'} alignItems={'center'} sx={{width: 'inherit', position:'relative'}}>
           
           <Fade in={mounted} timeout={4000}>
-            <Typography component={'h1'} variant="h3" sx={{fontWeight: '700', color:'secondary.dark'}} >Portfolio</Typography>
+            <Typography component={'h1'} variant="h3" sx={{fontWeight: '700', color:'secondary.main'}} >Portfolio</Typography>
           </Fade>
 
           
           <Fade in={mounted} timeout={5000}>
-            <Typography component={'h3'} variant="h5">Samaneh Sarchami</Typography>
+            <Typography component={'h3'} variant="h5" sx={{color:'primary.main'}}>Samaneh Sarchami</Typography>
           </Fade>
 
           <Zoom in={mounted} timeout={5000}>
@@ -113,7 +114,7 @@ export default function StartPage() {
 
             <a href={"https://instagram.com"} target="_blank">
               <IconButton>
-                <InstagramIcon sx={{fontSize:'2.2rem'}} />
+                <InstagramIcon sx={{fontSize:'2.2rem', color:'secondary.main'}} />
               </IconButton>
             </a>
 

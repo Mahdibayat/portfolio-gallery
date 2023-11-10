@@ -22,7 +22,7 @@ export default function CVPage() {
         }}
       >
         <Grid item xs={12} md={6} order={{xs:2, md:1}}>
-          <Typography className='font-pacifico' sx={{fontSize:'1.2rem', fontFamily:'Pacifico', }}>Samaneh Sarchame</Typography>
+          <Typography sx={{fontSize:'1.2rem' }}>Samaneh Sarchame</Typography>
             <Stack gap={1} sx={{mt:2}}>
               <Link to={'mailto:samaneh.sarchami777@gmail.com'}>
                 <Stack direction={'row'} gap={1}>

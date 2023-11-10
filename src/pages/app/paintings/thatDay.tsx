@@ -5,12 +5,15 @@ import { EffectCoverflow, Pagination } from 'swiper/modules';
 
 import Lightbox from "yet-another-react-lightbox";
 import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
+import BackButton from '../../../components/BackButton';
 
 export default function ThatDay() {
   const [open, setOpen] = React.useState(false);
   return (
     
     <>
+      <BackButton />
+
       <Box sx={{
         px:{xs:1, sm:2, md: 10},
         mt:{xs:1, sm:2, md: 4},
@@ -38,7 +41,7 @@ export default function ThatDay() {
         }}
       >
         <Stack alignItems={'center'}>
-          <Typography  component={'h1'} variant={'h2'} sx={{mb: 2, mt:3, fontSize:{xs:'1.4rem', md:'3rem'}}}>All Around Me</Typography>
+          <Typography  component={'h1'} variant={'h2'} sx={{mb: 2, mt:3, fontSize:{xs:'1.4rem', md:'3rem'}, color:'primary.main'}}>That Day (2013)</Typography>
         </Stack>
 
         

@@ -26,18 +26,16 @@ export default function SiteLayout() {
           bgcolor:'secondary.main',
           pt:1,
           px: isMobile ? 2 : 10,
-          borderRadius: '0 0 30px 30px',
           boxShadow: t => `0 -1px 6px 0 ${t.palette.primary.main}`,
           position:'sticky',
           top: 0,
-          zIndex: 100
+          zIndex: 100,
         }}
       >
         <Link to={'/app'} onClick={()=> pagesSignal.value = null}>
-          <Typography className="font-pacifico" sx={{
-            fontFamily:'Pacifico', 
+          <Typography sx={{
             fontSize:'1.5rem',
-            color: !pagesSignal.value ? 'primary.main' : undefined,
+            color: !pagesSignal.value ? 'primary.dark' : undefined,
             transition: 'color 500ms'
         }}>Samaneh Sarchami</Typography>
         </Link>
@@ -74,7 +72,7 @@ export default function SiteLayout() {
           position: 'fixed',
           bottom: 0,
           left: 0,
-          borderTopRightRadius: 30,
+          borderTopRightRadius: 5,
           bgcolor: 'rgba(0,0,0,0.3)',
           backdropFilter: 'blur(7px)',
           p: 1,
@@ -103,26 +101,29 @@ export default function SiteLayout() {
         open={menuDrawerSignal.value}
         onClose={() => menuDrawerSignal.value = false}
         anchor="right"
+        sx={{
+        }}
       >
       <Stack component='nav' alignItems={'center'}
         sx={{
-          minWidth:'200px'
+          minWidth:'200px',
+          bgcolor:'background.paper',
+          height:1
         }}
         gap={3}
       >
-        <Typography className="font-pacifico" sx={{mt:3, fontSize:'1.5rem', fontWeight:"800", fontFamily:'Pacifico', }}>Menu</Typography>
         <Tabs onChange={(e,v)=> {
             handleChangeRoute(e,v);
             setTimeout(()=>{
               menuDrawerSignal.value = false
             }, 500)
         }} value={pagesSignal.value} orientation="vertical"
-          sx={{ml:'auto'}}
+          sx={{ml:'auto', textAlign:'center', width:1, mt: '20vh' }}
         >
-          <Tab value='paintings' label="Paintings" />
-          <Tab value='poems' label="Poems" />
-          <Tab value='CV' label="CV" />
-          <Tab value='contact' label="Contact" />
+          <Tab sx={{color:'white'}} value='paintings' label="Paintings" />
+          <Tab sx={{color:'white'}} value='poems' label="Poems" />
+          <Tab sx={{color:'white'}} value='CV' label="CV" />
+          <Tab sx={{color:'white'}} value='contact' label="Contact" />
         </Tabs>
       </Stack>
       </Drawer>

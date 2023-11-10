@@ -3,6 +3,8 @@ import { Box, Typography, useTheme } from "@mui/material";
 
 import MasonItem from "../components/masonItem";
 import { pagesSignal } from "../state/pageSignal";
+import { Timeline } from "@mui/lab";
+import TimeLineItem from "../components/timeLineItem";
 
 export default function PageOne() {
   
@@ -12,68 +14,75 @@ export default function PageOne() {
       sx={{
         width: 1,
         maxWidth: '1200px',
-        m:'30px auto 20px'
+        m:'30px auto 20px',
       }}
     >
-      <Typography className="font-pacifico"
+      <Typography
         component={'h1'} 
-        sx={{textAlign:'center', fontFamily: "Pacifico", fontSize: '2rem', color:'secondary.dark', pb:3}}
-      >in this website you will see</Typography>
-      <Masonry
-        columns={{xs:1, sm:2, md:3}}
-        spacing={3}
-        sx={{
-          [t.breakpoints.down('md')]: {
-            m: '0'
-          }
-        }}
-      >
-        <MasonItem
-          imgUrl="/images/8.png"
-          aspectRatio='0.79 / 1'
-          title="Paintings"
-          titleSide="bottom"
-          link={'/app/paintings'}
-          onClick={() => pagesSignal.value = "paintings" }
-        />
-        
-        <MasonItem
-          imgUrl="/images/9.jpg"
-          aspectRatio='1.41 / 1'
-          title="Poems"
-          titleSide="top"
-          link={'/app/poems'}
-          onClick={() => pagesSignal.value = "poems" }
-        />
-        
-        <MasonItem
-          imgUrl="/images/11.jpg"
-          aspectRatio='1.2 / 1'
-          title="CV"
-          titleSide="top"
-          link={'/app/CV'}
-          onClick={() => pagesSignal.value = "CV" }
-        />
+        sx={{textAlign:'center', fontSize: '2rem', color:'secondary.dark', pb:3}}
+      >At a glance</Typography>
 
-        {/* <MasonItem
-          imgUrl="/images/10.jpg"
-          aspectRatio='0.73 / 1'
-          title="Designs"
-          titleSide="top"
-          link={'/app/designs'}
-          onClick={() => pagesSignal.value = "designs" }
-        /> */}
-        
-        <MasonItem
-          imgUrl="/images/12.jpg"
-          aspectRatio='1.79 / 1'
-          title="Contact"
-          titleSide="bottom"
-          link={'/app/contact'}
-          onClick={() => pagesSignal.value = "contact" }
-        />
 
-      </Masonry>
+<Timeline position="alternate">
+      <TimeLineItem
+        imgUrl="/images/26.jpg"
+        aspectRatio="0.87 / 1"
+        link="/app/paintings/an-afternoon-in-hiroshima"
+        title="an afternoon in hiroshima"
+        time="(2006)"
+      />
+      <TimeLineItem
+        imgUrl="/images/15.png"
+        aspectRatio="0.85 / 1"
+        link="/app/paintings/middle-eve"
+        title="Middle Eve"
+        time="(2007)"
+      />
+      <TimeLineItem
+        imgUrl="/images/16.jpg"
+        aspectRatio="1.04 / 1"
+        link="/app/paintings/all-around-me"
+        title="All Around Me"
+        time="(2012)"
+      />
+      <TimeLineItem
+        imgUrl="/images/34.jpg"
+        aspectRatio="1.22 / 1"
+        link="/app/paintings/that-day"
+        title="That Day"
+        time="(2013)"
+      />
+      <TimeLineItem
+        imgUrl="/images/48.jpg"
+        aspectRatio="1.33 / 1"
+        link="/app/the-window"
+        title="The Window"
+        time="(2013)"
+      />
+      <TimeLineItem
+        imgUrl="/images/12.jpg"
+        aspectRatio="1.79 / 1"
+        link="/app/paintings/aesthetics-of-suffering"
+        title="Aesthetics of suffering"
+        time="(2014)"
+      />
+
+      <TimeLineItem
+        imgUrl="/images/42.jpeg"
+        aspectRatio="1.33 / 1"
+        link="/app/poems/A-room-for-one's-won"
+        title="A room for one's own"
+        time="(2018 - 2020)"
+      />
+
+      <TimeLineItem
+        imgUrl="/images/51.jpg"
+        aspectRatio="1.01 / 1"
+        link="/app/stigmata"
+        title="Stigmata"
+        time="(2023)"
+      />
+    </Timeline>
     </Box>
   );
 }

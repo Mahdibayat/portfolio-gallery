@@ -5,7 +5,6 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  font-family: 'Slabo 27px', serif;
 }
 
 * {
@@ -14,7 +13,11 @@ body {
 
 a {
   text-decoration: none;
-  color: gray
+  color: #5a5c5a
+}
+
+a:active {
+  color:#5a5c5a
 }
 
 /* width */
@@ -34,8 +37,3 @@ a {
   border-radius: 10px;
 }
 
-.font-pacifico {
-  font-family: 'Pacifico', cursive;
-  font-family: 'Slabo 27px', serif;
-  /* fontFamily:'Pacifico',  */
-}
