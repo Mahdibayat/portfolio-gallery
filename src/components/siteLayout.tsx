@@ -1,8 +1,5 @@
-import EmailIcon from '@mui/icons-material/Email';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import MenuIcon from '@mui/icons-material/Menu';
-import { Container, Drawer, IconButton, Stack, Tab, Tabs, Typography, useMediaQuery } from "@mui/material";
+import { Box, Container, Drawer, IconButton, Stack, Tab, Tabs, Typography, useMediaQuery } from "@mui/material";
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import { menuDrawerSignal } from "../state/menuDrawerSignal";
 import { pagesSignal } from "../state/pageSignal";
@@ -17,26 +14,27 @@ export default function SiteLayout() {
   }
 
   return (
-    <>
+    <Container
+    sx={{
+      maxWidth: '920px',
+      m: '0px auto',
+      p: {xs: "10px", md:'100px'},
+      position: 'relative'
+    }}
+    >
       <Stack component={'header'}
         direction={'row'}
         justifyContent={'space-between'}
         alignItems={'center'}
-        sx={{
-          bgcolor:'secondary.main',
-          pt:1,
-          px: isMobile ? 2 : 10,
-          boxShadow: t => `0 -1px 6px 0 ${t.palette.primary.main}`,
-          position:'sticky',
-          top: 0,
-          zIndex: 100,
-        }}
       >
         <Link to={'/app'} onClick={()=> pagesSignal.value = null}>
           <Typography sx={{
-            fontSize:'1.5rem',
-            color: !pagesSignal.value ? 'primary.dark' : 'secondary.light',
-            transition: 'color 500ms'
+            fontSize:'29px',
+            color: '#fff',
+            letterSpacing: '1px',
+            ":hover": {
+              color: '#b8b8b8'
+            }
         }}>Samaneh Sarchami</Typography>
         </Link>
 
@@ -46,27 +44,31 @@ export default function SiteLayout() {
               <MenuIcon />
             </IconButton>
             :
-            <Stack component='nav' alignItems={'center'}>
-              <Tabs onChange={handleChangeRoute} value={pagesSignal.value}>
-                {/* <Tab value='/app' label="Timeline" /> */}
-                <Tab value='paintings' label="Paintings" />
-                <Tab value='poems' label="Poems" />
-                <Tab value='CV' label="CV" />
-                <Tab value='contact' label="Contact" />
-              </Tabs>
+            <Stack component='nav' alignItems={'center'} direction={'row'} gap={2}
+              sx={{
+                a: {
+                  letterSpacing: '2px',
+                  fontWeight: '300'
+                }
+              }}
+            >
+              <Link to={'/app/paintings'} >Paintings</Link>
+              <Link to={'/app/poems'} >Poems</Link>
+              <Link to={'/app/CV'} >CV</Link>
+              <Link to={'/app/contact'} >Contact</Link>
             </Stack>
         }
       </Stack>
 
-      <Container component={'main'}
+      <Box component={'main'}
         sx={{
           height:'calc(100vh - 56px - 40px)'
         }}
       >
         <Outlet />
-      </Container>
+      </Box>
 
-      <Stack 
+      {/* <Stack 
         component={'footer'}
         direction='row'
         sx={{
@@ -96,7 +98,7 @@ export default function SiteLayout() {
             <LocalPhoneIcon />
           </IconButton>
         </Link>
-      </Stack>
+      </Stack> */}
 
       <Drawer
         open={menuDrawerSignal.value}
@@ -129,6 +131,6 @@ export default function SiteLayout() {
         </Tabs>
       </Stack>
       </Drawer>
-    </>
+    </Container>
   )
 }

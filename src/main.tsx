@@ -62,6 +62,10 @@ const theme = createTheme({
       paper: '#99928e'
     },
 
+  },
+  typography: {
+    fontFamily: 'Roboto Condensed',
+    fontSize: 13,
   }
 })
 

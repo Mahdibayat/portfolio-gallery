@@ -5,6 +5,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 * {
@@ -13,11 +14,15 @@ body {
 
 a {
   text-decoration: none;
-  color: #5a5c5a
+  color: #fff
 }
 
 a:active {
-  color:#5a5c5a
+  color: #dfdddd
+}
+
+a:hover {
+  color: #b8b8b8
 }
 
 /* width */

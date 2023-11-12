@@ -35,20 +35,6 @@ export default function MasonItem({imgUrl, title, aspectRatio, link, onClick}: M
             transition: 'all 7000ms'
           }}
         />
-        {
-          !!title &&
-            <Typography
-              sx={{
-                color: 'background.default',
-                borderRadius: '5px',
-                px:1,
-                textAlign:'center',
-                fontSize:'2rem'
-              }}
-              component={'h3'}
-              variant="h4"
-            >{title}</Typography>
-        }
       </Box>
     </Link>
   )
